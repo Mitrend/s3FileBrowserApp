@@ -11,6 +11,6 @@ package:
 	echo ${VERSION} > version.txt
 
 	7z a artifacts/s3FileBrowserApp.zip *.js *.sh *.jade *.pac node_modules
-	cp redirect-setup.sh artifacts
+	cp s3FileBrowserApp-setup.sh artifacts
 
-	if [ -n "$(GIT_TAG)" ]; then cp artifacts/s3FileBrowserApp.zip artifacts/redirect_$(shell date +"%Y_%m_%d_%H_%M_%S")_$(GIT_TAG).zip; fi
+	if [ -n "$(GIT_TAG)" ]; then cp artifacts/s3FileBrowserApp.zip artifacts/s3FileBrowserApp_$(shell date +"%Y_%m_%d_%H_%M_%S")_$(GIT_TAG).zip; fi
