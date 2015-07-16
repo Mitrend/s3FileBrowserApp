@@ -27,7 +27,7 @@ aws s3 cp s3://$ARTIFACT_BUCKET/$ARTIFACT_PATH $APP_DIR/artifact.zip
 ls -al $APP_DIR
 
 # COPY CONFIG
-aws s3 cp s3://$CONFIG_BUCKET/$SERVER_CONFIG_PATH $APP_DIR/config.json
+aws s3 cp s3://$ARTIFACT_BUCKET/$SERVER_CONFIG_PATH $APP_DIR/config.json
 
 echo "----------------"
 echo "---> UNPACK <---"
