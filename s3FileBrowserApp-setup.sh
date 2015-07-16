@@ -46,4 +46,4 @@ FID="$APPNAME"
 LOG_FILE=$LOG_DIR/$APPNAME.log
 
 su -s "/bin/bash" -c "$APP_DIR/node_modules/forever/bin/forever stop $FID" portal
-su -s "/bin/bash" -c "$APP_DIR/node_modules/forever/bin/forever --sourceDir $APP_DIR start --uid $FID -o $LOG_FILE -e $LOG_FILE -a -l $LOG_DIR/forever.log app.js" portal
+su -s "/bin/bash" -c "$APP_DIR/node_modules/forever/bin/forever --sourceDir $APP_DIR start --uid $FID -o $LOG_FILE -e $LOG_FILE -a -l $LOG_DIR/forever.log server/app.js" portal
