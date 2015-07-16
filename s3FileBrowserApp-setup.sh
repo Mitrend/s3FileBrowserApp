@@ -9,6 +9,7 @@ FRONTEND_CONFIG_DIR=/mnt/md0/$APPNAME/build/js/
 ARTIFACT_BUCKET=$(cat /mnt/bucket)
 
 ARTIFACT_PATH=builds/$APPNAME/$APPNAME.zip
+SERVER_CONFIG_PATH=config/$APPNAME/config.json
 
 echo "---------------"
 echo "---> SETUP <---"
@@ -24,6 +25,9 @@ echo "---> DOWNLOAD ARTIFACT <---"
 echo "---------------------------"
 aws s3 cp s3://$ARTIFACT_BUCKET/$ARTIFACT_PATH $APP_DIR/artifact.zip
 ls -al $APP_DIR
+
+# COPY CONFIG
+aws s3 cp s3://$CONFIG_BUCKET/$SERVER_CONFIG_PATH $APP_DIR/config.json
 
 echo "----------------"
 echo "---> UNPACK <---"
