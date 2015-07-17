@@ -13,7 +13,7 @@ Building a Web Based File Browser with jsTree, Angularjs and Expressjs
 * Run `gulp` and navigate to `http://localhost:3000` to view the app
 * Copy config.json.sample to config.json 
 * Update the bucket name in config.json
-* Optionally change the aws region and provide security credentials (secretAccessKey and accessKeyId)
+* Optionally change the aws region and provide security credentials(secretAccessKey and accessKeyId) in config.json
 
 ### Tutorial 
 
