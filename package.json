@@ -1,32 +1,37 @@
 {
-  "name": "myFileBrowserApp",
-  "version": "0.1.0",
-  "description": "An Angularjs, jsTree and Expressjs web based File Browser app",
-  "main": "server/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository" : "https://github.com/arvindr21/fileBrowserApp",
-  "author": "Arvind Ravulavaru",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.6.5",
-    "cookie-parser": "^1.3.2",
-    "debug": "^1.0.4",
-    "ejs": "^1.0.0",
-    "express": "^4.8.5",
-    "forever": "^0.11.1",
-    "morgan": "^1.2.3",
-	"aws-sdk": "2.1.20"
-  },
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-jshint": "^1.8.4",
-    "gulp-livereload": "^2.1.1",
-    "gulp-nodemon": "^1.0.4",
-    "gulp-watch": "^0.6.9"
-  },
-  "engines": {
-    "node": "0.10.x"
-  }
+	"name": "myFileBrowserApp",
+	"version": "0.1.0",
+	"description": "An Angularjs, jsTree and Expressjs web based File Browser app",
+	"main": "server/app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": "https://github.com/arvindr21/fileBrowserApp",
+	"author": "Arvind Ravulavaru",
+	"license": "MIT",
+	"dependencies": {
+		"aws-sdk": "2.1.20",
+		"body-parser": "^1.6.5",
+		"cookie-parser": "^1.3.2",
+		"debug": "^1.0.4",
+		"read-chunk": "*",
+		"file-type": "*",
+		"ls-archive": "*",
+		"ejs": "^1.0.0",
+		"express": "^4.8.5",
+		"forever": "^0.11.1",
+		"lodash": "^3.10.1",
+		"morgan": "^1.2.3"
+	},
+	"devDependencies": {
+		"gulp": "^3.8.7",
+		"gulp-jshint": "^1.8.4",
+		"gulp-livereload": "^2.1.1",
+		"gulp-nodemon": "^1.0.4",
+		"gulp-watch": "^0.6.9"
+	},
+	"engines": {
+		"node": "0.10.x"
+	}
 }
+

@@ -10,6 +10,7 @@ Building a Web Based File Browser with jsTree, Angularjs and Expressjs
 
 * Download/clone the repo
 * Run `npm install`
+* Run `bower install`
 * Run `gulp` and navigate to `http://localhost:3000` to view the app
 * Copy config.json.sample to config.json 
 * Update the bucket name in config.json

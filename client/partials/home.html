@@ -1,16 +1,28 @@
 <div ng-controller="HomeCtrl">
-  <div class="row">
-    <div class="col-md-4 tree-browser">
-      <js-tree 
-      	tree-events="select_node:nodeSelected" 
-      	tree-ajax="/api/tree" 
-      	tree-core="tree_core"
-      	tree-plugins="dnd"
-      ></js-tree>
+
+    <div class="progress" ng-class="{ 'in-progress': inProgress }">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            <span class="sr-only"></span>
+        </div>
     </div>
-    <div class="col-md-8 file-viewer">
-      <pre><code>{{fileViewer}}</pre></code>
+
+    <!-- <button type="button" class="btn btn-default navbar-btn" ng-click="dev()">DEV</button> -->
+    <div class="row">
+        <div class="col-md-4 tree-browser">
+            <js-tree tree-events="select_node:nodeSelected" tree-ajax="/api/tree" tree-core="tree_core" tree-plugins="dnd"></js-tree>
+        </div>
+        <div class="col-md-8 file-viewer">
+            <div class="row">
+                <h1 class="pull-left">{{file}}</h1>
+                <button type="button" class="btn btn-default btn-lg pull-right" ng-click="downloadFile($event)" ng-disabled="!base">
+                    <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Download
+                </button>
+            </div>
+            <hr>
+            <div hljs hljs-source="subSource">
+            </div>
+        </div>
     </div>
-  </div>
 
 </div>
+
