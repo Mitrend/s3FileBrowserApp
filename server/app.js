@@ -36,11 +36,8 @@
 	app.use( express.static( path.join( __dirname, '../client' ) ) );
 
 	app.use( '/', routes );
-	
-	var port = process.env.PORT || 5353;
-	console.log('Attempting to start on port', port);
 
-	app.set( 'port', port );
+	app.set( 'port', 5353 );
 
 	var server = app.listen( app.get( 'port' ), function () {
 		console.log( 'Express server listening on port ' + server.address().port );
