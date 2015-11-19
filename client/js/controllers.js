@@ -6,6 +6,8 @@
 		'html',
 	]
 
+	// var host = 'http://127.0.0.1:5353'
+
 	app.controller( 'HomeCtrl', [ '$scope', '$http',
 		function ( $scope, $http ) {
 			// $scope.d = {}
@@ -37,7 +39,7 @@
 				if ( _.isUndefined( $scope.base ) ) {
 					return
 				}
-				$http.post( 'http://192.168.50.186:7564/api/download', {
+				$http.post( '/api/download', {
 					base: $scope.base
 				} ).success( function ( res ) {
 					window.location.assign( res )
@@ -69,7 +71,7 @@
 					}
 
 
-					$http.post( 'http://192.168.50.186:7564/api/view', {
+					$http.post( '/api/view', {
 						base: _l.base
 					} ).success( function ( res ) {
 						$scope.file = file

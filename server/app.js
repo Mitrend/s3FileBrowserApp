@@ -18,13 +18,13 @@
 	app.set( 'view engine', 'html' );
 
 	// we need CORS for the REST API
-	app.all( '*', function ( req, res, next ) {
-		// res.header( "Content-Type", "*" );
-		res.header( "Access-Control-Allow-Origin", "*" );
-		res.header( "Access-Control-Allow-Headers", "Content-Type,X-Requested-With" );
-		res.header( "Access-Control-Allow-Methods", 'GET,POST,PUT,HEAD,DELETE,OPTIONS' );
-		next();
-	} );
+	// app.all( '*', function ( req, res, next ) {
+	// 	// res.header( "Content-Type", "*" );
+	// 	res.header( "Access-Control-Allow-Origin", "*" );
+	// 	res.header( "Access-Control-Allow-Headers", "Content-Type,X-Requested-With" );
+	// 	res.header( "Access-Control-Allow-Methods", 'GET,POST,PUT,HEAD,DELETE,OPTIONS' );
+	// 	next();
+	// } );
 
 	app.use( logger( 'dev' ) );
 	app.use( bodyParser.json() );

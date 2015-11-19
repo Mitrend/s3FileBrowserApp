@@ -83,7 +83,6 @@
 			if ( _.isNull( type ) ) {
 				res.send( buffer.toString() )
 			} else {
-				inspect( type, "type" )
 
 				var archiveTypes = [
 					'epub',
