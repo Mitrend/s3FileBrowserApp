@@ -67,7 +67,7 @@
 
 					if ( ext == 'html' ) {
 						console.warn( 'getting resource' )
-						window.open( '/api/resource/' + _l.base )
+						window.open( '/static/' + _l.base )
 					}
 
 
